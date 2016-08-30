@@ -1,16 +1,10 @@
 const SlackBot = require('slackbots');
+const { random } = require('@fipp/compliments');
 
 const bot = new SlackBot({
   token: process.env.SLACK_TOKEN,
   name: 'fipp'
 })
-
-const compliments = [
-  'You are fantastic!',
-  'You are awesome!',
-  'Your smile is contagious!',
-  'You are an inspiration!'
-];
 
 bot.on('start', () => {
   bot.postMessageToChannel('general', 'Hello!');
@@ -26,8 +20,7 @@ bot.on('message', function(data) {
     const user = data.text.match(pattern)[1];
     if (user) {
       bot.getUserById(user).then(({ name }) => {
-        bot.postMessageToUser(name, compliments[currentCompliment]);
-        currentCompliment = (currentCompliment + 1) % compliments.length;
+        bot.postMessageToUser(name, random());
       });
     }
   }

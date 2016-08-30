@@ -19,6 +19,7 @@
   "homepage": "https://github.com/fipp/slackbot#readme",
   "private": true,
   "dependencies": {
+    "@fipp/compliments": "^1.0.0",
     "slackbots": "^0.5.2"
   },
   "engines": {
