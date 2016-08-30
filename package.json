@@ -1,0 +1,27 @@
+{
+  "name": "slackbot",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fipp/slackbot.git"
+  },
+  "author": "Terje Andersen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/fipp/slackbot/issues"
+  },
+  "homepage": "https://github.com/fipp/slackbot#readme",
+  "private": true,
+  "dependencies": {
+    "slackbots": "^0.5.2"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  }
+}
