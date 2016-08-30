@@ -1,7 +1,7 @@
 const SlackBot = require('slackbots');
 
 const bot = new SlackBot({
-  token: 'xoxb-74497822241-fZ8BGUutiY8Pxy5Li4l2dyAr',
+  token: process.env.SLACK_TOKEN,
   name: 'fipp'
 })
 
